@@ -1,6 +1,6 @@
-# Automated ETL Pipeline for NYC Taxi Data Processing with Apache Spark and MongoDB 🚕
+# Automated ETL Pipeline for NYC Taxi Data Processing with Apache Spark and MongoDB
 
-This project is part of the **Datafångst, migrering och förädling (ETL/ELT)** course at **Nackademin**, where I developed a scalable, automated, and robust ETL pipeline to process NYC taxi trip data using **Apache Spark** and **MongoDB**. The pipeline is designed to handle large datasets efficiently, perform meaningful transformations, and store the processed data for downstream analytics.
+This project is part of the **Datafångst, migrering och förädling (ETL/ELT)** course at **Nackademin**, where I developed a scalable, automated, and robust ETL pipeline to process NYC taxi trip data using **Apache Spark** and **MongoDB**. The pipeline is designed to handle large datasets efficiently, perform meaningful transformations, and store the processed data for downstream analytics. This project was developed and tested in a local environment with Apache Spark and MongoDB installed locally. It demonstrates how to process and store large-scale NYC taxi trip data efficiently using local resources.
 
 ---
 
@@ -16,8 +16,8 @@ This project is part of the **Datafångst, migrering och förädling (ETL/ELT)**
 
 ## ⚙️ Key Features
 
-### 1. **Data Pipeline**
-- **Source Data**: NYC Yellow Taxi trip data (2023, 2024) in .parquet format, dynamically downloaded from the [NYC Taxi Data webpage](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page). The pipeline is designed to automatically fetch updated data each month as it becomes available on the webpage. 
+### Data Pipeline
+- **Source Data**: NYC Yellow Taxi trip data (2023, 2024) in .parquet format, dynamically downloaded from the [NYC Taxi Data webpage](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page). The pipeline is designed to automatically fetch updated data each month as it becomes available on the webpage.
 - **ETL Workflow**:
   - **Extract**: Downloads raw `.parquet` files dynamically based on years and months specified.
   - **Transform**:
@@ -26,24 +26,14 @@ This project is part of the **Datafångst, migrering och förädling (ETL/ELT)**
     - Segments trips into categories: "short", "medium", and "long".
   - **Load**: Saves the processed data to a MongoDB collection named `processed_trips`.
 
-### 2. **Automation**
+### Automation
 - A **`cron` job** was set up to automate the periodic execution of the pipeline, ensuring it processes newly available data every month without manual intervention.
 
-### 3. **Validation**
+### Validation
 - Verified processed data with:
   - MongoDB queries for accuracy.
   - PySpark transformation logs.
   - Storage metrics (MongoDB statistics).
-
----
-
-## 🛠️ Tools and Technologies
-
-- **Apache Spark**: Distributed data processing and transformation.
-- **MongoDB**: NoSQL database for storing processed data.
-- **Python**: Core programming language with PySpark, Pandas, and PyMongo.
-- **Linux Shell**: For cron job setup and system automation.
-- **Spark UI**: For monitoring and debugging distributed tasks.
 
 ---
 
@@ -64,20 +54,6 @@ This project is part of the **Datafångst, migrering och förädling (ETL/ELT)**
 
 ---
 
-## 🧪 Validation & Results
-
-- **Workers' Contribution**:
-  Verified that all 4 workers contributed equally to processing tasks via Spark UI.
-  
-- **Data Storage**:
-  - Over **85 million records** were processed.
-  - MongoDB storage size: **5.68 GB**.
-
-- **Query Results**:
-  Sample queries confirmed the accuracy of data transformations, ensuring that the ETL pipeline was successfully implemented.
-
----
-
 ## 🖥️ How to Run
 
 ### Prerequisites
@@ -86,6 +62,13 @@ This project is part of the **Datafångst, migrering och förädling (ETL/ELT)**
   - `pyspark`
   - `pymongo`
   - `requests`
+
+### Local Environment Setup
+- Ensure that **Apache Spark** and **MongoDB** are installed and configured on your local machine.
+- The pipeline was developed and tested on a local machine with the following specifications:
+  - **OS**: macOS/Linux
+  - **RAM**: 16 GB
+  - **CPU**: Quad-core processor
 
 ### Steps
 1. **Set up Spark**:
@@ -116,7 +99,7 @@ This project is part of the **Datafångst, migrering och förädling (ETL/ELT)**
     Add the following cron job to process new data monthly:
     ```bash
     crontab -e
-    0 0 1 * * /Users/noraayaz/Desktop/assignment_VG_ETL/NYC_taxi_trip_data_ETL
+    0 0 1 * * /path/to/NYC_taxi_trip_data_ETL.py
     ```
 
 ---
