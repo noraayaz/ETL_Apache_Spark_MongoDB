@@ -133,9 +133,9 @@ This project is part of the **Datafångst, migrering och förädling (ETL/ELT)**
 
 If you have any questions or feedback, feel free to reach out!
 
-- **Email**: [nora.ayaz@example.com](mailto:nora.ayaz@example.com)
-- **GitHub**: [github.com/nora-ayaz](https://github.com/nora-ayaz)
-- **LinkedIn**: [linkedin.com/in/noraayaz](https://linkedin.com/in/noraayaz)
+- **Email**: [noraayaz@outlook.com](mailto:noraayaz@outlook.com)
+- **GitHub**: [github.com/noraayaz](https://github.com/noraayaz)
+- **LinkedIn**: [linkedin.com/in/noraayaz89](https://linkedin.com/in/noraayaz89)
 
 ---
 
