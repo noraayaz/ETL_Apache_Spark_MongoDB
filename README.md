@@ -1,4 +1,4 @@
-# NYC Taxi Trip Data ETL Pipeline 🚕
+# Automated ETL Pipeline for NYC Taxi Data Processing with Apache Spark and MongoDB 🚕
 
 This project is part of the **Datafångst, migrering och förädling (ETL/ELT)** course at **Nackademin**, where I developed a scalable, automated, and robust ETL pipeline to process NYC taxi trip data using **Apache Spark** and **MongoDB**. The pipeline is designed to handle large datasets efficiently, perform meaningful transformations, and store the processed data for downstream analytics.
 
